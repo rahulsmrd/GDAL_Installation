@@ -20,11 +20,11 @@
                     python-version: "3.10"
                     cache: 'pip'
 
-                # - name: Install GDAL Dependencies
-                #   run: |
-                #         sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
-                #         sudo apt-get update
-                #         sudo apt-get install gdal-bin libgdal-dev
+                - name: Install GDAL Dependencies
+                  run: |
+                        sudo apt-add-repository ppa:ubuntugis/ubuntugis-unstable
+                        sudo apt-get update
+                        sudo apt-get install gdal-bin libgdal-dev
 
                 - name: Create and start virtual environment
                   run: |
@@ -33,4 +33,5 @@
 
                 - name: Install dependencies
                   run: |
-                        pip install GDAL==3.8.4
+                        version=$(gdal-config --version)
+                        pip install GDAL==${version}
