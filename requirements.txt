@@ -1,1 +1,12 @@
-GDAL==3.2.3
+dj-database-url==1.2.0
+Django==4.1.6
+django-environ==0.9.0
+django-storages==1.13.2
+psycopg2-binary==2.9.5
+tzdata==2022.7
+djangorestframework==3.13.1
+djangorestframework-simplejwt==5.0.0
+django-cors-headers==3.8.0
+requests==2.26.0
+beautifulsoup4==4.10.0
+whitenoise

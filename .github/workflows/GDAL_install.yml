@@ -17,7 +17,7 @@
                 - name: Setup Python
                   uses: actions/setup-python@v3.0.0
                   with:
-                    python-version: "3.10"
+                    python-version: "3.10.1"
                     cache: 'pip'
 
                 - name: Install GDAL Dependencies
@@ -31,7 +31,11 @@
                       python -m venv venv
                       source venv/bin/activate
 
-                - name: Install dependencies
+                - name: Installing Requirement
+                  run: |
+                      pip install -r requirements.txt
+
+                - name: Install GDAL
                   run: |
                         version=$(gdal-config --version)
                         pip install GDAL==${version}
