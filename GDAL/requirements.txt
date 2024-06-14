@@ -10,7 +10,9 @@ django-storages==1.13.2
 djangorestframework==3.13.1
 djangorestframework-simplejwt==5.0.0
 GDAL==3.8.4
+gunicorn==22.0.0
 idna==3.7
+packaging==24.1
 psycopg2-binary==2.9.5
 PyJWT==2.8.0
 pytz==2024.1
